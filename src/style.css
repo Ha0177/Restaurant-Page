@@ -120,3 +120,35 @@ nav button.active {
     line-height: 1.6;
     max-width: 250px;
 }
+
+footer {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: auto;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 1.1em;
+    font-weight: 900;
+}
+
+.github-logo {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.github-logo:hover,
+footer a:hover {
+    transform: scale(1.1);
+}

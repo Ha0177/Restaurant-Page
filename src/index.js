@@ -2,8 +2,16 @@ import "./style.css";
 import { loadHome } from "./home-module.js";
 import { loadMenu } from "./menu-module.js";
 import { loadContact } from "./contact-module.js";
+import githubLogo from "./github-logo.svg.png";
 
 loadHome();
+
+const footerLink = document.querySelector("footer a");
+const githubLogoImg = document.createElement("img");
+githubLogoImg.src = githubLogo;
+githubLogoImg.alt = "GitHub Logo";
+githubLogoImg.classList.add("github-logo");
+footerLink.prepend(githubLogoImg);
 
 (function tabSwitcher() {
     const homeBtn = document.querySelector("#home")
