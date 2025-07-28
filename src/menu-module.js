@@ -1,5 +1,23 @@
 import menuImg from "./menu-img.png"
 
+function createMenuItem(name, description) {
+    const menuItem = document.createElement("div");
+    menuItem.classList.add("menu-item")
+
+    const itemName = document.createElement("h3")
+    itemName.textContent = name;
+    itemName.classList.add("item-name")
+
+    const itemDescription = document.createElement("p");
+    itemDescription.textContent = description;
+    itemDescription.classList.add("item-description")
+
+    menuItem.appendChild(itemName)
+    menuItem.appendChild(itemDescription)
+
+    return menuItem;
+}
+
 export function loadMenu() {
     const container = document.querySelector("#content")
     const headerImg = document.createElement("img");
@@ -8,9 +26,12 @@ export function loadMenu() {
     headline.textContent = "This is the menu!"
     headline.classList.add("headline")
 
-    const description = document.createElement("p");
-    description.textContent = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore itaque tempora magni molestias. Dolorem dolor totam tempora dolorum, corporis deleniti reiciendis rem, modi neque fugit maiores? Sunt ipsa architecto itaque."
-    description.classList.add("description")
+    const itemContainer = document.createElement("div");
+    itemContainer.classList.add("item-container")
+
+    itemContainer.appendChild(createMenuItem("Option 1", "The best option"))
+    itemContainer.appendChild(createMenuItem("Option 2", "The second best option"))
+    itemContainer.appendChild(createMenuItem("Option 3", "The third best option"))
 
     headerImg.src = menuImg;
     headerImg.classList.add("header-img");
@@ -18,5 +39,5 @@ export function loadMenu() {
 
     container.appendChild(headerImg);
     container.appendChild(headline);
-    container.appendChild(description);
+    container.appendChild(itemContainer);
 } 

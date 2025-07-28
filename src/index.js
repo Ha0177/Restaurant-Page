@@ -13,14 +13,23 @@ loadHome();
 
     homeBtn.addEventListener("click", () => {
         container.innerHTML = "";
+        contactBtn.classList.remove("active")
+        menuBtn.classList.remove("active")
+        homeBtn.classList.add("active")
         loadHome();
     })
     menuBtn.addEventListener("click", () => {
         container.innerHTML = "";
+        homeBtn.classList.remove("active")
+        contactBtn.classList.remove("active")
+        menuBtn.classList.add("active")
         loadMenu();
     })
     contactBtn.addEventListener("click", () => {
         container.innerHTML = "";
+        menuBtn.classList.remove("active")
+        homeBtn.classList.remove("active")
+        contactBtn.classList.add("active")
         loadContact();
     })
 })();

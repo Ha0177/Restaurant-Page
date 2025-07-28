@@ -9,7 +9,7 @@ export function loadContact() {
     headline.classList.add("headline")
 
     const description = document.createElement("p");
-    description.textContent = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore itaque tempora magni molestias. Dolorem dolor totam tempora dolorum, corporis deleniti reiciendis rem, modi neque fugit maiores? Sunt ipsa architecto itaque."
+    description.textContent = "At adsiasdi@mail.com or Phone number 04295026902123122313 for orders."
     description.classList.add("description")
 
     headerImg.src = contactImg;
